@@ -4,34 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LAST NEWS | ព័ត៌មានចុងក្រោយ</title>
+<title>LAST NEWS — ព័ត៌មានថ្មីៗ</title>
 
 <meta name="description"
-content="LAST NEWS - ព័ត៌មានថ្មីៗពីកម្ពុជា និងពិភពលោក">
+content="LAST NEWS — ព័ត៌មានថ្មីៗ ព័ត៌មានទាន់ហេតុការណ៍ កម្ពុជា ពិភពលោក អាជីវកម្ម បច្ចេកវិទ្យា កីឡា និងកម្សាន្ត">
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
+    box-sizing:border-box;
 }
 
 body{
-    font-family:
-        Arial,
-        "Noto Sans Khmer",
-        "Khmer OS",
-        sans-serif;
-
+    font-family:Arial,"Noto Sans Khmer","Khmer OS",sans-serif;
     background:#f3f4f6;
     color:#111827;
     line-height:1.6;
@@ -43,8 +30,8 @@ a{
 }
 
 img{
-    width:100%;
     display:block;
+    width:100%;
     object-fit:cover;
 }
 
@@ -54,19 +41,19 @@ img{
 ========================= */
 
 .top-bar{
-    background:#101827;
-    color:#e5e7eb;
-    font-size:12px;
-    padding:6px 20px;
+    background:#111827;
+    color:white;
+    font-size:11px;
+    padding:6px 15px;
 }
 
 .top-inner{
-    max-width:1100px;
+    max-width:1200px;
     margin:auto;
 
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
 }
 
 
@@ -75,32 +62,24 @@ img{
 ========================= */
 
 header{
-    background:#ffffff;
-    border-bottom:1px solid #e5e7eb;
-
-    position:sticky;
-    top:0;
-    z-index:1000;
+    background:white;
+    border-bottom:1px solid #ddd;
 }
 
 .header-inner{
-    max-width:1100px;
+    max-width:1200px;
     min-height:70px;
-
     margin:auto;
-    padding:0 20px;
+    padding:0 15px;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
-
-/* LOGO */
-
 .logo{
     font-family:Arial,sans-serif;
-    font-size:29px;
+    font-size:28px;
     font-weight:900;
     letter-spacing:-1px;
 }
@@ -111,49 +90,37 @@ header{
 
 .logo small{
     display:block;
-
     color:#777;
     font-size:7px;
-    font-weight:bold;
-
     letter-spacing:2px;
-    margin-top:-3px;
+    margin-top:-4px;
 }
-
-
-/* NAV */
 
 nav{
     display:flex;
     align-items:center;
-    gap:18px;
+    gap:20px;
 
-    font-size:13px;
+    font-size:12px;
     font-weight:bold;
-}
-
-nav a{
-    transition:.2s;
 }
 
 nav a:hover{
     color:#e11d48;
 }
 
-
-/* DARK BUTTON */
-
-.dark-button{
+.theme{
     width:38px;
     height:38px;
 
     border:1px solid #ddd;
     border-radius:50%;
 
-    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    cursor:pointer;
-    font-size:17px;
+    font-size:20px;
 }
 
 
@@ -162,32 +129,20 @@ nav a:hover{
 ========================= */
 
 .breaking{
-    background:#e81749;
+    background:#ed1748;
     color:white;
-
-    padding:9px 20px;
-
-    overflow:hidden;
+    padding:9px 15px;
 }
 
 .breaking-inner{
-    max-width:1100px;
+    max-width:1200px;
     margin:auto;
 
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    font-size:13px;
+    font-size:12px;
     font-weight:bold;
-}
 
-.breaking-label{
     white-space:nowrap;
-}
-
-.breaking-text{
-    white-space:nowrap;
+    overflow:hidden;
 }
 
 
@@ -196,10 +151,9 @@ nav a:hover{
 ========================= */
 
 main{
-    max-width:1100px;
-
-    margin:28px auto 45px;
-    padding:0 20px;
+    max-width:1200px;
+    margin:25px auto 45px;
+    padding:0 15px;
 }
 
 
@@ -208,29 +162,27 @@ main{
 ========================= */
 
 .section-title{
-    border-bottom:3px solid #111827;
-
-    margin-bottom:15px;
+    margin:0 0 14px;
     padding-bottom:7px;
+
+    border-bottom:3px solid #111827;
 }
 
 .section-title h2{
-    font-size:22px;
+    font-size:25px;
     font-weight:900;
 }
 
 .section-title h2::before{
     content:"";
-
     display:inline-block;
 
     width:5px;
-    height:22px;
+    height:25px;
 
     background:#e11d48;
 
-    margin-right:8px;
-
+    margin-right:9px;
     vertical-align:-3px;
 }
 
@@ -241,153 +193,138 @@ main{
 
 .hero{
     display:grid;
-
     grid-template-columns:2fr 1fr;
+    gap:12px;
 
-    gap:15px;
-
-    margin-bottom:25px;
+    margin-bottom:15px;
 }
-
-
-/* BIG HERO */
 
 .hero-main{
     position:relative;
-
-    height:390px;
+    height:350px;
 
     overflow:hidden;
+    border-radius:8px;
 
-    border-radius:9px;
-
-    background:#111827;
+    background:#111;
 }
 
 .hero-main img{
+    width:100%;
     height:100%;
-
-    opacity:.72;
-
-    transition:.4s;
 }
 
-.hero-main:hover img{
-    transform:scale(1.03);
-}
-
-
-/* HERO OVERLAY */
-
-.hero-overlay{
+.hero-main::after{
+    content:"";
     position:absolute;
-
     inset:0;
 
-    display:flex;
-    align-items:flex-end;
-
-    padding:22px;
-
     background:
-        linear-gradient(
-            transparent 35%,
-            rgba(0,0,0,.92)
-        );
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,0) 70%
+    );
 }
 
 .hero-content{
+    position:absolute;
+    z-index:2;
+
+    left:20px;
+    right:20px;
+    bottom:18px;
+
     color:white;
 }
 
 .tag{
     display:inline-block;
 
-    background:#e11d48;
+    background:#ed1748;
     color:white;
 
     padding:4px 8px;
-
     border-radius:3px;
 
-    font-family:Arial,sans-serif;
-
-    font-size:10px;
+    font-size:9px;
     font-weight:bold;
 
-    margin-bottom:7px;
+    margin-bottom:6px;
 }
 
 .hero-content h1{
-    font-size:30px;
+    font-size:27px;
     line-height:1.2;
 
-    margin-bottom:7px;
+    margin-bottom:5px;
 }
 
 .hero-content p{
-    font-size:13px;
+    font-size:11px;
     color:#eee;
 }
 
 
-/* HERO SIDE */
+/* =========================
+   SIDE HERO
+========================= */
 
 .hero-side{
     display:grid;
-
     grid-template-rows:1fr 1fr;
-
-    gap:15px;
+    gap:12px;
 }
 
 .side-card{
     position:relative;
 
-    height:187px;
+    height:169px;
 
     overflow:hidden;
+    border-radius:8px;
 
-    border-radius:9px;
-
-    background:#111827;
+    background:#111;
 }
 
 .side-card img{
+    width:100%;
     height:100%;
-
-    opacity:.68;
-
-    transition:.4s;
 }
 
-.side-card:hover img{
-    transform:scale(1.04);
-}
-
-.side-overlay{
+.side-card::after{
+    content:"";
     position:absolute;
-
     inset:0;
 
-    display:flex;
-    align-items:flex-end;
-
-    padding:14px;
-
     background:
-        linear-gradient(
-            transparent 25%,
-            rgba(0,0,0,.9)
-        );
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,0) 70%
+    );
 }
 
-.side-overlay h3{
+.side-content{
+    position:absolute;
+    z-index:2;
+
+    left:12px;
+    right:10px;
+    bottom:10px;
+
     color:white;
+}
 
-    font-size:17px;
+.side-content .tag{
+    font-size:7px;
+    padding:3px 5px;
+    margin-bottom:3px;
+}
 
-    line-height:1.25;
+.side-content h3{
+    font-size:13px;
+    line-height:1.3;
 }
 
 
@@ -397,43 +334,35 @@ main{
 
 .categories{
     display:flex;
-
-    gap:8px;
+    gap:7px;
 
     overflow-x:auto;
 
-    padding-bottom:5px;
-
-    margin-bottom:25px;
-
-    scrollbar-width:none;
+    margin:5px 0 20px;
+    padding:3px 0 6px;
 }
 
 .categories::-webkit-scrollbar{
     display:none;
 }
 
-.categories button{
-    white-space:nowrap;
-
-    border:1px solid #ddd;
+.categories a{
+    flex:none;
 
     background:white;
 
-    color:#555;
-
-    padding:7px 13px;
+    border:1px solid #ddd;
 
     border-radius:20px;
 
-    cursor:pointer;
+    padding:5px 13px;
 
-    font-size:12px;
+    font-size:10px;
 
-    transition:.2s;
+    color:#555;
 }
 
-.categories button:hover{
+.categories a:hover{
     background:#e11d48;
     color:white;
     border-color:#e11d48;
@@ -450,74 +379,66 @@ main{
     grid-template-columns:
         repeat(3,1fr);
 
-    gap:18px;
+    gap:15px;
 }
-
-
-/* CARD */
 
 .news-card{
     background:white;
 
-    border-radius:9px;
+    border-radius:8px;
 
     overflow:hidden;
 
     box-shadow:
-        0 4px 15px
-        rgba(0,0,0,.08);
+        0 3px 12px rgba(0,0,0,.08);
 
-    transition:.25s;
+    transition:.2s;
 }
 
 .news-card:hover{
     transform:translateY(-3px);
 
     box-shadow:
-        0 8px 25px
-        rgba(0,0,0,.12);
+        0 7px 18px rgba(0,0,0,.12);
 }
 
 .news-card img{
-    height:175px;
+    height:150px;
 }
 
 .news-content{
-    padding:14px;
+    padding:12px;
 }
 
 .news-category{
     color:#e11d48;
 
-    font-family:Arial,sans-serif;
+    font-size:8px;
+    font-weight:bold;
 
-    font-size:10px;
-
-    font-weight:900;
+    text-transform:uppercase;
 }
 
 .news-content h3{
-    font-size:17px;
+    font-size:15px;
+    line-height:1.4;
 
-    line-height:1.35;
-
-    margin:5px 0;
+    margin:4px 0;
 }
 
 .news-content p{
     color:#777;
 
-    font-size:12px;
-
+    font-size:10px;
     line-height:1.5;
 }
 
 .news-date{
     color:#999;
 
-    font-size:10px;
+    font-size:8px;
 
-    margin-top:7px;
+    margin-top:6px;
 }
 
 
@@ -530,56 +451,80 @@ main{
 
     grid-template-columns:1fr 1fr;
 
-    margin-top:35px;
-
     background:white;
 
-    border-radius:10px;
+    border-radius:9px;
 
     overflow:hidden;
 
+    margin-top:25px;
+
     box-shadow:
-        0 4px 20px
-        rgba(0,0,0,.07);
+        0 3px 15px rgba(0,0,0,.08);
 }
 
 .featured img{
-    height:280px;
+    height:220px;
 }
 
 .featured-content{
-    padding:27px;
+    padding:25px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.featured-label{
+    display:inline-block;
+
+    width:max-content;
+
+    background:#ed1748;
+    color:white;
+
+    padding:4px 8px;
+
+    font-size:8px;
+    font-weight:bold;
+
+    border-radius:3px;
+
+    margin-bottom:8px;
 }
 
 .featured-content h2{
-    font-size:27px;
-
+    font-size:24px;
     line-height:1.3;
 
-    margin:7px 0 10px;
+    margin-bottom:8px;
 }
 
 .featured-content p{
     color:#777;
+    font-size:11px;
 
-    font-size:14px;
+    margin-bottom:13px;
 }
 
-.read-button{
+.read-more{
     display:inline-block;
 
-    background:#e11d48;
+    width:max-content;
+
+    background:#ed1748;
     color:white;
 
-    padding:9px 15px;
+    padding:7px 12px;
 
-    border-radius:5px;
+    border-radius:4px;
 
-    margin-top:15px;
-
-    font-size:12px;
-
+    font-size:10px;
     font-weight:bold;
+}
+
+.read-more:hover{
+    background:#be123c;
 }
 
 
@@ -588,20 +533,19 @@ main{
 ========================= */
 
 footer{
-    background:#101827;
+    background:#111827;
 
     color:white;
 
-    padding:35px 20px;
-
     text-align:center;
+
+    padding:32px 15px;
 }
 
 .footer-logo{
     font-family:Arial,sans-serif;
 
-    font-size:27px;
-
+    font-size:25px;
     font-weight:900;
 }
 
@@ -609,112 +553,63 @@ footer{
     color:#e11d48;
 }
 
+.footer-created{
+    margin-top:10px;
+
+    color:white;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+}
+
+.footer-created span{
+    color:#e11d48;
+}
+
 footer p{
-    color:#aaa;
+    color:#9ca3af;
 
-    font-size:12px;
+    font-size:9px;
 
-    margin-top:7px;
+    margin-top:5px;
 }
 
 
 /* =========================
-   TABLET
+   MOBILE
 ========================= */
-
-@media(max-width:900px){
-
-    .header-inner{
-        padding:0 14px;
-    }
-
-    nav{
-        gap:11px;
-        font-size:11px;
-    }
-
-    main{
-        padding:0 14px;
-    }
-
-    .hero-main{
-        height:320px;
-    }
-
-    .side-card{
-        height:152px;
-    }
-
-    .news-grid{
-        gap:12px;
-    }
-
-}
-
-
-/* =================================================
-   MOBILE COMPACT
-   ដូច Screenshot ខាងស្ដាំ
-================================================= */
 
 @media(max-width:700px){
 
-    /* TOP */
-
     .top-bar{
-        padding:4px 10px;
-
-        font-size:8px;
-    }
-
-    .top-inner{
-        min-height:14px;
-    }
-
-    .top-inner span:last-child{
-        display:none;
-    }
-
-
-    /* HEADER */
-
-    header{
-        position:relative;
+        font-size:7px;
+        padding:4px 8px;
     }
 
     .header-inner{
-        min-height:45px;
-
-        padding:0 10px;
+        min-height:48px;
+        padding:0 9px;
     }
 
     .logo{
         font-size:18px;
-        letter-spacing:-.7px;
     }
 
     .logo small{
-        font-size:5px;
-
-        letter-spacing:1.2px;
-
-        margin-top:-2px;
+        font-size:4px;
+        letter-spacing:1px;
     }
 
-
-    /* NAV */
-
     nav{
-        display:flex;
-
         gap:8px;
+        font-size:7px;
 
-        font-size:8px;
-
-        max-width:48vw;
+        max-width:45%;
 
         overflow:hidden;
-
         white-space:nowrap;
     }
 
@@ -722,71 +617,39 @@ footer p{
         display:none;
     }
 
-
-    /* DARK */
-
-    .dark-button{
-        width:30px;
-        height:30px;
-
-        font-size:13px;
+    .theme{
+        width:29px;
+        height:29px;
+        font-size:14px;
     }
 
-
-    /* BREAKING */
-
     .breaking{
-        padding:5px 10px;
+        padding:6px 9px;
     }
 
     .breaking-inner{
-        font-size:8px;
-
-        gap:5px;
-
-        overflow:hidden;
+        font-size:7px;
     }
-
-    .breaking-label{
-        font-size:8px;
-    }
-
-    .breaking-text{
-        font-size:8px;
-    }
-
-
-    /* MAIN */
 
     main{
-        margin:14px auto 25px;
-
-        padding:0 10px;
+        margin:18px auto 30px;
+        padding:0 9px;
     }
 
-
-    /* TITLE */
-
     .section-title{
-        margin-bottom:9px;
-
+        margin-bottom:10px;
         padding-bottom:5px;
-
-        border-bottom-width:2px;
+        border-bottom:2px solid #111827;
     }
 
     .section-title h2{
-        font-size:15px;
+        font-size:17px;
     }
 
     .section-title h2::before{
-        width:3px;
-
-        height:15px;
-
-        margin-right:5px;
-
-        vertical-align:-2px;
+        width:4px;
+        height:18px;
+        margin-right:6px;
     }
 
 
@@ -794,93 +657,65 @@ footer p{
 
     .hero{
         grid-template-columns:2fr 1fr;
-
         gap:7px;
-
-        margin-bottom:14px;
     }
-
-
-    /* BIG */
 
     .hero-main{
-        height:220px;
-
-        border-radius:7px;
+        height:185px;
     }
 
-    .hero-overlay{
-        padding:9px;
-    }
-
-    .tag{
-        font-size:6px;
-
-        padding:2px 4px;
-
-        margin-bottom:3px;
+    .hero-content{
+        left:9px;
+        right:8px;
+        bottom:9px;
     }
 
     .hero-content h1{
         font-size:15px;
-
-        line-height:1.15;
-
-        margin-bottom:3px;
     }
 
     .hero-content p{
         font-size:7px;
-
-        line-height:1.3;
     }
 
-
-    /* SIDE */
+    .tag{
+        font-size:5px;
+        padding:3px 5px;
+    }
 
     .hero-side{
         gap:7px;
     }
 
     .side-card{
-        height:106px;
-
-        border-radius:7px;
+        height:89px;
     }
 
-    .side-overlay{
-        padding:7px;
+    .side-content{
+        left:6px;
+        right:5px;
+        bottom:6px;
     }
 
-    .side-overlay .tag{
-        font-size:5px;
-    }
-
-    .side-overlay h3{
+    .side-content h3{
         font-size:8px;
-
-        line-height:1.2;
     }
 
 
-    /* CATEGORY */
+    /* CATEGORIES */
 
     .categories{
-        gap:5px;
-
+        gap:4px;
         margin-bottom:15px;
     }
 
-    .categories button{
-        padding:4px 8px;
-
-        font-size:7px;
+    .categories a{
+        padding:4px 9px;
+        font-size:6px;
     }
 
 
-    /* NEWS GRID
-       3 cards per row
-    */
+    /* NEWS CARDS */
 
     .news-grid{
         grid-template-columns:
@@ -891,22 +726,14 @@ footer p{
 
     .news-card{
         border-radius:6px;
-
-        box-shadow:
-            0 2px 8px
-            rgba(0,0,0,.08);
-    }
-
-    .news-card:hover{
-        transform:none;
     }
 
     .news-card img{
-        height:82px;
+        height:72px;
     }
 
     .news-content{
-        padding:7px;
+        padding:6px;
     }
 
     .news-category{
@@ -915,22 +742,16 @@ footer p{
 
     .news-content h3{
         font-size:8px;
-
-        line-height:1.25;
-
-        margin:3px 0;
+        line-height:1.35;
     }
 
     .news-content p{
-        font-size:6px;
-
-        line-height:1.3;
+        font-size:5.5px;
+        line-height:1.35;
     }
 
     .news-date{
         font-size:5px;
-
-        margin-top:3px;
     }
 
 
@@ -938,152 +759,56 @@ footer p{
 
     .featured{
         grid-template-columns:1fr 1fr;
-
-        margin-top:18px;
-
-        border-radius:7px;
+        margin-top:15px;
     }
 
     .featured img{
-        height:135px;
+        height:105px;
     }
 
     .featured-content{
-        padding:10px;
+        padding:8px;
     }
 
-    .featured-content .tag{
+    .featured-label{
         font-size:5px;
+        padding:3px 5px;
     }
 
     .featured-content h2{
-        font-size:11px;
-
-        line-height:1.25;
-
-        margin:4px 0;
+        font-size:9px;
     }
 
     .featured-content p{
+        font-size:5.5px;
+    }
+
+    .read-more{
+        padding:4px 7px;
         font-size:6px;
-
-        line-height:1.35;
-    }
-
-    .read-button{
-        padding:5px 7px;
-
-        margin-top:6px;
-
-        font-size:7px;
     }
 
 
-    /* FOOTER */
+    /* FOOTER MOBILE */
 
     footer{
-        padding:20px 10px;
-
-        margin-top:20px;
+        padding:22px 8px;
     }
 
     .footer-logo{
         font-size:18px;
     }
 
+    .footer-created{
+        font-size:7px;
+        margin-top:7px;
+        letter-spacing:.7px;
+    }
+
     footer p{
-        font-size:7px;
-
-        margin-top:4px;
-    }
-
-}
-
-
-/* =================================================
-   VERY SMALL PHONE
-================================================= */
-
-@media(max-width:400px){
-
-    .logo{
-        font-size:16px;
-    }
-
-    nav{
-        gap:6px;
-
-        font-size:7px;
-    }
-
-    .hero-main{
-        height:190px;
-    }
-
-    .side-card{
-        height:91px;
-    }
-
-    .hero-content h1{
-        font-size:13px;
-    }
-
-    .hero-content p{
         font-size:6px;
     }
 
-    .news-card img{
-        height:72px;
-    }
-
-    .news-content h3{
-        font-size:7px;
-    }
-
-    .featured img{
-        height:115px;
-    }
-
-    .featured-content h2{
-        font-size:10px;
-    }
-
-}
-
-
-/* =================================================
-   DARK MODE
-================================================= */
-
-body.dark{
-    background:#0b1120;
-    color:#f9fafb;
-}
-
-body.dark header,
-body.dark .news-card,
-body.dark .featured,
-body.dark .categories button{
-    background:#111827;
-
-    color:#f9fafb;
-
-    border-color:#263244;
-}
-
-body.dark .news-content p,
-body.dark .featured-content p{
-    color:#9ca3af;
-}
-
-body.dark .section-title{
-    border-color:#f9fafb;
-}
-
-body.dark .dark-button{
-    background:#111827;
-    color:white;
-    border-color:#374151;
 }
 
 </style>
@@ -1105,8 +830,8 @@ body.dark .dark-button{
             📰 LAST NEWS — ព័ត៌មានចុងក្រោយ
         </span>
 
-        <span id="currentDate">
-            ថ្ងៃនេះ
+        <span>
+            6 តុលា 2026
         </span>
 
     </div>
@@ -1122,9 +847,6 @@ body.dark .dark-button{
 
     <div class="header-inner">
 
-
-        <!-- LOGO -->
-
         <a href="index.html" class="logo">
 
             LAST<span>NEWS</span>
@@ -1136,15 +858,13 @@ body.dark .dark-button{
         </a>
 
 
-        <!-- NAVIGATION -->
-
         <nav>
 
             <a href="index.html">
                 Home
             </a>
 
-            <a href="#khmer">
+            <a href="#cambodia">
                 កម្ពុជា
             </a>
 
@@ -1160,23 +880,12 @@ body.dark .dark-button{
                 បច្ចេកវិទ្យា
             </a>
 
-            <a href="#sports">
-                កីឡា
-            </a>
-
         </nav>
 
 
-        <!-- DARK MODE -->
-
-        <button
-            class="dark-button"
-            onclick="toggleDark()">
-
+        <div class="theme">
             🌙
-
-        </button>
-
+        </div>
 
     </div>
 
@@ -1191,13 +900,9 @@ body.dark .dark-button{
 
     <div class="breaking-inner">
 
-        <span class="breaking-label">
-            🔴 BREAKING NEWS
-        </span>
-
-        <span class="breaking-text">
-            — សូមស្វាគមន៍មកកាន់ LAST NEWS • ព័ត៌មានថ្មីៗ និងទាន់ហេតុការណ៍
-        </span>
+        🔴 BREAKING NEWS —
+        សូមស្វាគមន៍មកកាន់ LAST NEWS •
+        ព័ត៌មានថ្មីៗ និងទាន់ហេតុការណ៍
 
     </div>
 
@@ -1212,35 +917,33 @@ body.dark .dark-button{
 
 
 <!-- =========================
-     SECTION
+     LATEST
 ========================= -->
 
-<div class="section-title">
+<section>
 
-    <h2>
-        ព័ត៌មានចុងក្រោយ
-    </h2>
+    <div class="section-title">
 
-</div>
+        <h2>
+            ព័ត៌មានចុងក្រោយ
+        </h2>
 
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
+    </div>
 
 
-    <!-- BIG STORY -->
+    <!-- HERO -->
 
-    <a href="article.html" class="hero-main">
+    <div class="hero">
 
-        <img
-            src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=85"
-            alt="LAST NEWS"
-        >
 
-        <div class="hero-overlay">
+        <!-- TOP STORY -->
+
+        <a href="article.html"
+           class="hero-main">
+
+            <img
+                src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=90"
+                alt="LAST NEWS">
 
             <div class="hero-content">
 
@@ -1249,45 +952,156 @@ body.dark .dark-button{
                 </span>
 
                 <h1>
-                    LAST NEWS — ព័ត៌មានថ្មីៗ និងទាន់ហេតុការណ៍
+                    LAST NEWS — ព័ត៌មានថ្មីៗ
+                    និងទាន់ហេតុការណ៍
                 </h1>
 
                 <p>
-                    ព័ត៌មានកម្ពុជា ពិភពលោក អាជីវកម្ម
-                    បច្ចេកវិទ្យា កីឡា និងកម្សាន្ត
+                    តាមដានព័ត៌មានសំខាន់ៗ
+                    ពីកម្ពុជា ពិភពលោក
+                    អាជីវកម្ម និងបច្ចេកវិទ្យា
                 </p>
 
             </div>
 
-        </div>
-
-    </a>
+        </a>
 
 
-    <!-- SIDE STORIES -->
+        <!-- SIDE NEWS -->
 
-    <div class="hero-side">
+        <div class="hero-side">
 
 
-        <a href="article.html" class="side-card">
+            <a href="article.html"
+               class="side-card">
 
-            <img
-                src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=800&q=85"
-                alt="World News"
-            >
+                <img
+                    src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=700&q=85"
+                    alt="World News">
 
-            <div class="side-overlay">
-
-                <div>
+                <div class="side-content">
 
                     <span class="tag">
                         WORLD
                     </span>
 
                     <h3>
-                        ព័ត៌មានសំខាន់ៗពីពិភពលោក
+                        ព័ត៌មានថ្មីៗពីពិភពលោក
                     </h3>
 
+                </div>
+
+            </a>
+
+
+            <a href="article.html"
+               class="side-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=85"
+                    alt="Business News">
+
+                <div class="side-content">
+
+                    <span class="tag">
+                        BUSINESS
+                    </span>
+
+                    <h3>
+                        ព័ត៌មានអាជីវកម្ម
+                        និងសេដ្ឋកិច្ច
+                    </h3>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- CATEGORY -->
+
+    <div class="categories">
+
+        <a href="#cambodia">
+            🇰🇭 កម្ពុជា
+        </a>
+
+        <a href="#world">
+            🌍 ពិភពលោក
+        </a>
+
+        <a href="#business">
+            💼 អាជីវកម្ម
+        </a>
+
+        <a href="#technology">
+            💻 បច្ចេកវិទ្យា
+        </a>
+
+        <a href="#sports">
+            ⚽ កីឡា
+        </a>
+
+        <a href="#entertainment">
+            🎬 កម្សាន្ត
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     NEWS GRID
+========================= -->
+
+<section id="cambodia">
+
+    <div class="section-title">
+
+        <h2>
+            ព័ត៌មានថ្មីៗ
+        </h2>
+
+    </div>
+
+
+    <div class="news-grid">
+
+
+        <!-- CAMBODIA -->
+
+        <a href="article.html"
+           class="news-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=700&q=85"
+                alt="Cambodia">
+
+            <div class="news-content">
+
+                <div class="news-category">
+                    CAMBODIA
+                </div>
+
+                <h3>
+                    ព័ត៌មានថ្មីៗ
+                    និងព្រឹត្តិការណ៍សំខាន់ៗ
+                    នៅកម្ពុជា
+                </h3>
+
+                <p>
+                    ព័ត៌មានសង្គម និងព័ត៌មាន
+                    ប្រចាំថ្ងៃពីប្រទេសកម្ពុជា
+                </p>
+
+                <div class="news-date">
+                    📰 ថ្ងៃនេះ
                 </div>
 
             </div>
@@ -1295,25 +1109,174 @@ body.dark .dark-button{
         </a>
 
 
-        <a href="article.html" class="side-card">
+        <!-- WORLD -->
+
+        <a href="article.html"
+           class="news-card"
+           id="world">
 
             <img
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=85"
-                alt="Business News"
-            >
+                src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=700&q=85"
+                alt="World">
 
-            <div class="side-overlay">
+            <div class="news-content">
 
-                <div>
+                <div class="news-category">
+                    WORLD
+                </div>
 
-                    <span class="tag">
-                        BUSINESS
-                    </span>
+                <h3>
+                    ព័ត៌មានសំខាន់ៗ
+                    ពីពិភពលោក
+                </h3>
 
-                    <h3>
-                        ព័ត៌មានអាជីវកម្ម និងសេដ្ឋកិច្ច
-                    </h3>
+                <p>
+                    ព័ត៌មានអន្តរជាតិ និង
+                    ព្រឹត្តិការណ៍កំពុងចាប់អារម្មណ៍
+                </p>
 
+                <div class="news-date">
+                    📰 ថ្ងៃនេះ
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- BUSINESS -->
+
+        <a href="article.html"
+           class="news-card"
+           id="business">
+
+            <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=85"
+                alt="Business">
+
+            <div class="news-content">
+
+                <div class="news-category">
+                    BUSINESS
+                </div>
+
+                <h3>
+                    ព័ត៌មានអាជីវកម្ម
+                    និងសេដ្ឋកិច្ច
+                </h3>
+
+                <p>
+                    ទីផ្សារ ក្រុមហ៊ុន
+                    និងព័ត៌មានសេដ្ឋកិច្ច
+                </p>
+
+                <div class="news-date">
+                    📰 ថ្ងៃនេះ
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- TECHNOLOGY -->
+
+        <a href="article.html"
+           class="news-card"
+           id="technology">
+
+            <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=85"
+                alt="Technology">
+
+            <div class="news-content">
+
+                <div class="news-category">
+                    TECHNOLOGY
+                </div>
+
+                <h3>
+                    បច្ចេកវិទ្យាថ្មីៗ
+                    និងការច្នៃប្រឌិត
+                </h3>
+
+                <p>
+                    AI Smartphone Internet
+                    និងបច្ចេកវិទ្យាថ្មី
+                </p>
+
+                <div class="news-date">
+                    📰 ថ្ងៃនេះ
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- SPORTS -->
+
+        <a href="article.html"
+           class="news-card"
+           id="sports">
+
+            <img
+                src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=85"
+                alt="Sports">
+
+            <div class="news-content">
+
+                <div class="news-category">
+                    SPORTS
+                </div>
+
+                <h3>
+                    ព័ត៌មានកីឡា
+                    និងព្រឹត្តិការណ៍ធំៗ
+                </h3>
+
+                <p>
+                    ព័ត៌មានកីឡា
+                    និងការប្រកួតសំខាន់ៗ
+                </p>
+
+                <div class="news-date">
+                    📰 ថ្ងៃនេះ
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- ENTERTAINMENT -->
+
+        <a href="article.html"
+           class="news-card"
+           id="entertainment">
+
+            <img
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=700&q=85"
+                alt="Entertainment">
+
+            <div class="news-content">
+
+                <div class="news-category">
+                    ENTERTAINMENT
+                </div>
+
+                <h3>
+                    ព័ត៌មានកម្សាន្ត
+                    តារា និងព្រឹត្តិការណ៍
+                </h3>
+
+                <p>
+                    តន្ត្រី ភាពយន្ត
+                    តារា និងកម្មវិធីកម្សាន្ត
+                </p>
+
+                <div class="news-date">
+                    📰 ថ្ងៃនេះ
                 </div>
 
             </div>
@@ -1326,311 +1289,47 @@ body.dark .dark-button{
 </section>
 
 
-<!-- =========================
-     CATEGORIES
-========================= -->
-
-<div class="categories">
-
-    <button>
-        ទាំងអស់
-    </button>
-
-    <button>
-        🇰🇭 កម្ពុជា
-    </button>
-
-    <button>
-        🌍 ពិភពលោក
-    </button>
-
-    <button>
-        💼 អាជីវកម្ម
-    </button>
-
-    <button>
-        💻 បច្ចេកវិទ្យា
-    </button>
-
-    <button>
-        ⚽ កីឡា
-    </button>
-
-    <button>
-        🎬 កម្សាន្ត
-    </button>
-
-</div>
-
-
-<!-- =========================
-     NEWS SECTION
-========================= -->
-
-<div
-    class="section-title"
-    id="khmer">
-
-    <h2>
-        ព័ត៌មានថ្មីៗ
-    </h2>
-
-</div>
-
-
-<section class="news-grid">
-
-
-    <!-- CARD 1 -->
-
-    <a href="article.html" class="news-card">
-
-        <img
-            src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=800&q=85"
-            alt="Cambodia News"
-        >
-
-        <div class="news-content">
-
-            <span class="news-category">
-                CAMBODIA
-            </span>
-
-            <h3>
-                ព័ត៌មានថ្មីៗ និងព្រឹត្តិការណ៍សំខាន់ៗនៅកម្ពុជា
-            </h3>
-
-            <p>
-                តាមដានព័ត៌មានថ្មីៗ
-                និងរឿងរ៉ាវសំខាន់ៗនៅកម្ពុជា។
-            </p>
-
-            <div class="news-date">
-                📅 ថ្ងៃនេះ
-            </div>
-
-        </div>
-
-    </a>
-
-
-    <!-- CARD 2 -->
-
-    <a
-        href="article.html"
-        class="news-card"
-        id="world">
-
-        <img
-            src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=800&q=85"
-            alt="World News"
-        >
-
-        <div class="news-content">
-
-            <span class="news-category">
-                WORLD
-            </span>
-
-            <h3>
-                ព្រឹត្តិការណ៍សំខាន់ៗនៅលើពិភពលោក
-            </h3>
-
-            <p>
-                ព័ត៌មានអន្តរជាតិ
-                និងព្រឹត្តិការណ៍សំខាន់ៗ។
-            </p>
-
-            <div class="news-date">
-                📅 ថ្ងៃនេះ
-            </div>
-
-        </div>
-
-    </a>
-
-
-    <!-- CARD 3 -->
-
-    <a
-        href="article.html"
-        class="news-card"
-        id="business">
-
-        <img
-            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=85"
-            alt="Business News"
-        >
-
-        <div class="news-content">
-
-            <span class="news-category">
-                BUSINESS
-            </span>
-
-            <h3>
-                ព័ត៌មានអាជីវកម្ម និងទីផ្សារ
-            </h3>
-
-            <p>
-                ព័ត៌មានសេដ្ឋកិច្ច
-                ទីផ្សារ និងអាជីវកម្មថ្មីៗ។
-            </p>
-
-            <div class="news-date">
-                📅 ថ្ងៃនេះ
-            </div>
-
-        </div>
-
-    </a>
-
-
-    <!-- CARD 4 -->
-
-    <a
-        href="article.html"
-        class="news-card"
-        id="technology">
-
-        <img
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=85"
-            alt="Technology News"
-        >
-
-        <div class="news-content">
-
-            <span class="news-category">
-                TECHNOLOGY
-            </span>
-
-            <h3>
-                បច្ចេកវិទ្យាថ្មីៗកំពុងផ្លាស់ប្តូរពិភពលោក
-            </h3>
-
-            <p>
-                AI, Smartphone, Internet
-                និងបច្ចេកវិទ្យាថ្មីៗ។
-            </p>
-
-            <div class="news-date">
-                📅 ថ្ងៃនេះ
-            </div>
-
-        </div>
-
-    </a>
-
-
-    <!-- CARD 5 -->
-
-    <a
-        href="article.html"
-        class="news-card"
-        id="sports">
-
-        <img
-            src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=85"
-            alt="Sports News"
-        >
-
-        <div class="news-content">
-
-            <span class="news-category">
-                SPORTS
-            </span>
-
-            <h3>
-                ព័ត៌មានកីឡា និងលទ្ធផលប្រកួតចុងក្រោយ
-            </h3>
-
-            <p>
-                តាមដានព័ត៌មានកីឡា
-                និងព្រឹត្តិការណ៍ធំៗ។
-            </p>
-
-            <div class="news-date">
-                📅 ថ្ងៃនេះ
-            </div>
-
-        </div>
-
-    </a>
-
-
-    <!-- CARD 6 -->
-
-    <a href="article.html" class="news-card">
-
-        <img
-            src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=85"
-            alt="Entertainment News"
-        >
-
-        <div class="news-content">
-
-            <span class="news-category">
-                ENTERTAINMENT
-            </span>
-
-            <h3>
-                ព័ត៌មានកម្សាន្ត តារា និងវប្បធម៌
-            </h3>
-
-            <p>
-                ព័ត៌មានកម្សាន្ត
-                និងព្រឹត្តិការណ៍សិល្បៈ។
-            </p>
-
-            <div class="news-date">
-                📅 ថ្ងៃនេះ
-            </div>
-
-        </div>
-
-    </a>
-
-
-</section>
-
 
 <!-- =========================
      FEATURED
 ========================= -->
 
-<section class="featured">
+<section>
+
+    <div class="featured">
 
 
-    <img
-        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=85"
-        alt="AI Technology"
-    >
+        <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=90"
+            alt="AI Technology">
 
 
-    <div class="featured-content">
+        <div class="featured-content">
 
-        <span class="tag">
-            FEATURED
-        </span>
+            <span class="featured-label">
+                FEATURED
+            </span>
 
-        <h2>
-            AI និងបច្ចេកវិទ្យា៖
-            អនាគតកំពុងមកដល់
-        </h2>
+            <h2>
+                AI និងបច្ចេកវិទ្យា
+                អនាគតកំពុងផ្លាស់ប្តូរ
+            </h2>
 
-        <p>
-            បច្ចេកវិទ្យាថ្មីៗកំពុងក្លាយជា
-            ផ្នែកសំខាន់ក្នុងជីវិតប្រចាំថ្ងៃ
-            និងអាជីវកម្ម។
-        </p>
+            <p>
+                ស្វែងយល់ពីបច្ចេកវិទ្យាថ្មីៗ
+                និងការរីកចម្រើនរបស់ AI
+                ដែលកំពុងផ្លាស់ប្តូរជីវិតប្រចាំថ្ងៃ។
+            </p>
 
-        <a
-            href="article.html"
-            class="read-button">
+            <a href="article.html"
+               class="read-more">
 
-            អានបន្ថែម →
+                អានបន្ថែម →
 
-        </a>
+            </a>
+
+        </div>
+
 
     </div>
 
@@ -1640,6 +1339,7 @@ body.dark .dark-button{
 </main>
 
 
+
 <!-- =========================
      FOOTER
 ========================= -->
@@ -1647,14 +1347,20 @@ body.dark .dark-button{
 <footer>
 
     <div class="footer-logo">
-
         LAST<span>NEWS</span>
+    </div>
 
+    <div class="footer-created">
+        CREATE BY <span>CHHUN SOPHORN</span>
     </div>
 
     <p>
+        NEWS • MEDIA • INFORMATION
+    </p>
+
+    <p>
         ព័ត៌មានថ្មីៗ • ទាន់ហេតុការណ៍
-        • ពីកម្ពុជា និងពិភពលោក
+        • កម្ពុជា និងពិភពលោក
     </p>
 
     <p>
@@ -1662,42 +1368,6 @@ body.dark .dark-button{
     </p>
 
 </footer>
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
-
-/* DATE */
-
-const dateElement =
-    document.getElementById("currentDate");
-
-const today =
-    new Date();
-
-dateElement.textContent =
-    today.toLocaleDateString(
-        "km-KH",
-        {
-            year:"numeric",
-            month:"long",
-            day:"numeric"
-        }
-    );
-
-
-/* DARK MODE */
-
-function toggleDark(){
-
-    document.body.classList.toggle("dark");
-
-}
-
-</script>
 
 
 </body>
