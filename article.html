@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>LAST NEWS | Article</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,"Noto Sans Khmer",sans-serif;
+  background:#f3f4f6;
+  color:#111827;
+  line-height:1.8;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.top{
+  background:#111827;
+  color:#ddd;
+  padding:7px 20px;
+  font-size:12px;
+}
+
+.top-in{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+}
+
+header{
+  background:white;
+  border-bottom:1px solid #ddd;
+}
+
+.header-in{
+  max-width:1100px;
+  min-height:70px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font:bold 29px Arial;
+}
+
+.logo span{
+  color:#e11d48;
+}
+
+.logo small{
+  display:block;
+  font-size:7px;
+  letter-spacing:2px;
+  color:#777;
+}
+
+nav{
+  display:flex;
+  gap:20px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+nav a:hover{
+  color:#e11d48;
+}
+
+.breaking{
+  background:#e11d48;
+  color:white;
+  padding:10px 20px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.breaking-in{
+  max-width:1100px;
+  margin:auto;
+}
+
+main{
+  max-width:900px;
+  margin:35px auto 60px;
+  padding:0 20px;
+}
+
+.article{
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 5px 25px #00000012;
+}
+
+.article-head{
+  padding:30px 35px 20px;
+}
+
+.category{
+  display:inline-block;
+  background:#e11d48;
+  color:white;
+  padding:5px 10px;
+  border-radius:4px;
+  font:bold 11px Arial;
+  margin-bottom:12px;
+}
+
+h1{
+  font-size:40px;
+  line-height:1.3;
+  margin-bottom:12px;
+}
+
+.meta{
+  color:#777;
+  font-size:13px;
+}
+
+.cover{
+  width:100%;
+  height:480px;
+  object-fit:cover;
+}
+
+.article-body{
+  padding:30px 35px 40px;
+}
+
+.article-body p{
+  font-size:17px;
+  margin-bottom:20px;
+}
+
+.article-body h2{
+  font-size:25px;
+  margin:30px 0 12px;
+  border-left:5px solid #e11d48;
+  padding-left:10px;
+}
+
+.quote{
+  margin:25px 0;
+  padding:20px;
+  background:#f3f4f6;
+  border-left:5px solid #e11d48;
+  font-weight:bold;
+  font-size:17px;
+}
+
+.back{
+  display:inline-block;
+  margin-top:10px;
+  background:#111827;
+  color:white;
+  padding:10px 17px;
+  border-radius:5px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.related{
+  margin-top:35px;
+}
+
+.related h2{
+  font-size:23px;
+  border-bottom:3px solid #111827;
+  padding-bottom:8px;
+  margin-bottom:18px;
+}
+
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.related-card{
+  background:white;
+  border-radius:9px;
+  overflow:hidden;
+  box-shadow:0 4px 15px #00000010;
+}
+
+.related-card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+}
+
+.related-card div{
+  padding:13px;
+}
+
+.related-card span{
+  color:#e11d48;
+  font:bold 10px Arial;
+}
+
+.related-card h3{
+  font-size:16px;
+  line-height:1.4;
+  margin-top:5px;
+}
+
+footer{
+  background:#111827;
+  color:white;
+  padding:35px 20px;
+  text-align:center;
+}
+
+.footer-logo{
+  font:bold 27px Arial;
+}
+
+.footer-logo span{
+  color:#e11d48;
+}
+
+footer p{
+  color:#aaa;
+  font-size:12px;
+  margin-top:8px;
+}
+
+@media(max-width:700px){
+
+  nav{
+    display:none;
+  }
+
+  h1{
+    font-size:28px;
+  }
+
+  .article-head{
+    padding:22px 18px 15px;
+  }
+
+  .cover{
+    height:270px;
+  }
+
+  .article-body{
+    padding:22px 18px 30px;
+  }
+
+  .article-body p{
+    font-size:16px;
+  }
+
+  .related-grid{
+    grid-template-columns:1fr;
+  }
+
+  .top-in{
+    font-size:10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP -->
+
+<div class="top">
+  <div class="top-in">
+    <span>📰 LAST NEWS — ព័ត៌មានចុងក្រោយ</span>
+    <span>LAST NEWS MEDIA</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="header-in">
+
+    <a href="index.html" class="logo">
+      LAST<span>NEWS</span>
+      <small>NEWS • MEDIA • INFORMATION</small>
+    </a>
+
+    <nav>
+      <a href="index.html">ទំព័រដើម</a>
+      <a href="index.html#khmer">កម្ពុជា</a>
+      <a href="index.html#world">ពិភពលោក</a>
+      <a href="index.html#business">អាជីវកម្ម</a>
+      <a href="index.html#tech">បច្ចេកវិទ្យា</a>
+      <a href="index.html#sports">កីឡា</a>
+    </nav>
+
+  </div>
+
+</header>
+
+<!-- BREAKING -->
+
+<div class="breaking">
+  <div class="breaking-in">
+    🔴 BREAKING NEWS — LAST NEWS • ព័ត៌មានថ្មីៗ និងទាន់ហេតុការណ៍
+  </div>
+</div>
+
+
+<!-- ARTICLE -->
+
+<main>
+
+  <article class="article">
+
+    <div class="article-head">
+
+      <span class="category">
+        TECHNOLOGY
+      </span>
+
+      <h1>
+        AI និងបច្ចេកវិទ្យា៖ អនាគតកំពុងមកដល់
+      </h1>
+
+      <div class="meta">
+        📅 October 6, 2026 • ✍️ LAST NEWS
+      </div>
+
+    </div>
+
+
+    <img
+      class="cover"
+      src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=85"
+      alt="Technology News"
+    >
+
+
+    <div class="article-body">
+
+      <p>
+        បច្ចេកវិទ្យាកំពុងមានការរីកចម្រើនយ៉ាងឆាប់រហ័ស
+        ហើយកំពុងផ្លាស់ប្តូររបៀបដែលមនុស្សរស់នៅ
+        ធ្វើការ និងទំនាក់ទំនងគ្នា។
+      </p>
+
+      <p>
+        ជាពិសេស បច្ចេកវិទ្យា AI ឬ
+        Artificial Intelligence កំពុងក្លាយជាបច្ចេកវិទ្យា
+        សំខាន់មួយនៅក្នុងពិភពលោក។
+      </p>
+
+
+      <h2>
+        AI កំពុងផ្លាស់ប្តូរពិភពលោក
+      </h2>
+
+      <p>
+        បញ្ញាសិប្បនិម្មិតអាចជួយមនុស្សក្នុងការវិភាគទិន្នន័យ
+        បង្កើតមាតិកា សរសេរកម្មវិធី បកប្រែភាសា
+        និងការងារជាច្រើនផ្សេងទៀត។
+      </p>
+
+      <div class="quote">
+        💡 បច្ចេកវិទ្យាថ្មីៗអាចបង្កើតឱកាសថ្មី
+        ប្រសិនបើយើងរៀនប្រើប្រាស់វាឱ្យបានត្រឹមត្រូវ។
+      </div>
+
+
+      <h2>
+        អនាគតនៃបច្ចេកវិទ្យា
+      </h2>
+
+      <p>
+        ក្នុងរយៈពេលប៉ុន្មានឆ្នាំខាងមុខ
+        យើងអាចឃើញការរីកចម្រើនបន្ថែមទៀត
+        ក្នុងវិស័យ AI, Robotics, Cloud Computing
+        និង Digital Technology។
+      </p>
+
+      <p>
+        LAST NEWS នឹងបន្តនាំយកព័ត៌មានថ្មីៗ
+        និងរឿងរ៉ាវសំខាន់ៗទាក់ទងនឹងបច្ចេកវិទ្យា
+        មកជូនអ្នកអាន។
+      </p>
+
+
+      <a href="index.html" class="back">
+        ← ត្រឡប់ទៅ LAST NEWS
+      </a>
+
+    </div>
+
+  </article>
+
+
+  <!-- RELATED -->
+
+  <section class="related">
+
+    <h2>
+      ព័ត៌មានពាក់ព័ន្ធ
+    </h2>
+
+    <div class="related-grid">
+
+
+      <a href="article.html" class="related-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+          alt="Technology"
+        >
+
+        <div>
+          <span>TECHNOLOGY</span>
+          <h3>
+            បច្ចេកវិទ្យាថ្មីៗកំពុងផ្លាស់ប្តូរពិភពលោក
+          </h3>
+        </div>
+
+      </a>
+
+
+      <a href="article.html" class="related-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
+          alt="Business"
+        >
+
+        <div>
+          <span>BUSINESS</span>
+          <h3>
+            ព័ត៌មានអាជីវកម្ម និងសេដ្ឋកិច្ចថ្មីៗ
+          </h3>
+        </div>
+
+      </a>
+
+
+      <a href="article.html" class="related-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80"
+          alt="Sports"
+        >
+
+        <div>
+          <span>SPORTS</span>
+          <h3>
+            ព័ត៌មានកីឡា និងព្រឹត្តិការណ៍សំខាន់ៗ
+          </h3>
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-logo">
+    LAST<span>NEWS</span>
+  </div>
+
+  <p>
+    ព័ត៌មានថ្មីៗ • ទាន់ហេតុការណ៍ • ពីកម្ពុជា និងពិភពលោក
+  </p>
+
+  <p>
+    © 2026 LAST NEWS — All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>
