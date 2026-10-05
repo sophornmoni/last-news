@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "LAST NEWS — ព័ត៌មានថ្មីៗ និងទាន់ហេតុការណ៍",
+    "category": "TOP STORY",
+    "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=90",
+    "description": "តាមដានព័ត៌មានសំខាន់ៗពីកម្ពុជា ពិភពលោក អាជីវកម្ម និងបច្ចេកវិទ្យា។",
+    "content": "នេះគឺជាអត្ថបទដំបូងរបស់ LAST NEWS។ យើងនឹងបន្តផ្សព្វផ្សាយព័ត៌មានថ្មីៗ និងព័ត៌មានទាន់ហេតុការណ៍ជាប្រចាំ។",
+    "author": "CHHUN SOPHORN",
+    "date": "2026-10-06",
+    "featured": true,
+    "breaking": true
+  }
+]
