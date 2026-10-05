@@ -1,0 +1,131 @@
+name: Publish Article
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: "Article title"
+        required: true
+        type: string
+
+      category:
+        description: "Article category"
+        required: true
+        type: string
+
+      image:
+        description: "Article image URL"
+        required: true
+        type: string
+
+      description:
+        description: "Article description"
+        required: true
+        type: string
+
+      content:
+        description: "Article content"
+        required: true
+        type: string
+
+      author:
+        description: "Author"
+        required: true
+        default: "CHHUN SOPHORN"
+        type: string
+
+      featured:
+        description: "Featured"
+        required: true
+        default: false
+        type: boolean
+
+      breaking:
+        description: "Breaking News"
+        required: true
+        default: false
+        type: boolean
+
+
+permissions:
+  contents: write
+
+
+jobs:
+
+  publish:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+
+      - name: Create Article
+        env:
+          TITLE: ${{ inputs.title }}
+          CATEGORY: ${{ inputs.category }}
+          IMAGE: ${{ inputs.image }}
+          DESCRIPTION: ${{ inputs.description }}
+          CONTENT: ${{ inputs.content }}
+          AUTHOR: ${{ inputs.author }}
+          FEATURED: ${{ inputs.featured }}
+          BREAKING: ${{ inputs.breaking }}
+
+        run: |
+
+          python3 <<'PY'
+
+          import json
+          import os
+          from datetime import datetime, timezone
+
+          file = "articles.json"
+
+          try:
+              with open(file, "r", encoding="utf-8") as f:
+                  articles = json.load(f)
+          except:
+              articles = []
+
+          article = {
+              "id": int(datetime.now(timezone.utc).timestamp() * 1000),
+              "title": os.environ["TITLE"],
+              "category": os.environ["CATEGORY"],
+              "image": os.environ["IMAGE"],
+              "description": os.environ["DESCRIPTION"],
+              "content": os.environ["CONTENT"],
+              "author": os.environ["AUTHOR"],
+              "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+              "featured": os.environ["FEATURED"].lower() == "true",
+              "breaking": os.environ["BREAKING"].lower() == "true"
+          }
+
+          articles.insert(0, article)
+
+          with open(file, "w", encoding="utf-8") as f:
+              json.dump(
+                  articles,
+                  f,
+                  ensure_ascii=False,
+                  indent=2
+              )
+
+          print("Article published successfully.")
+
+          PY
+
+
+      - name: Commit Article
+        run: |
+
+          git config user.name "LAST NEWS"
+          git config user.email "actions@github.com"
+
+          git add articles.json
+
+          git commit -m "Publish new article"
+
+          git push
