@@ -1,190 +1,281 @@
 <!DOCTYPE html>
 <html lang="km">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LAST NEWS | ព័ត៌មានចុងក្រោយ</title>
+<meta name="description" content="LAST NEWS - ព័ត៌មានថ្មីៗពីកម្ពុជា និងពិភពលោក">
 
-  <title>LAST NEWS | ព័ត៌មានចុងក្រោយ</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#e11d48;--dark:#111827;--bg:#f3f4f6;--card:#fff;--text:#111827;--muted:#6b7280}
+body{font-family:Arial,"Noto Sans Khmer",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block;object-fit:cover}
 
-  <meta name="description"
-        content="LAST NEWS - ព័ត៌មានចុងក្រោយ ព័ត៌មានកម្ពុជា ពិភពលោក បច្ចេកវិទ្យា អាជីវកម្ម កីឡា និងកម្សាន្ត។">
+.top{background:var(--dark);color:#ddd;padding:7px 20px;font-size:12px}
+.topin{max-width:1100px;margin:auto;display:flex;justify-content:space-between}
 
-  <meta name="theme-color" content="#111827">
+header{background:#fff;border-bottom:1px solid #ddd;position:sticky;top:0;z-index:10}
+.head{max-width:1100px;margin:auto;min-height:70px;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:bold 29px Arial}
+.logo span{color:var(--red)}
+.logo small{display:block;font-size:7px;letter-spacing:2px;color:#777}
 
-  <style>
-    /* =========================
-       RESET
-    ========================= */
+nav{display:flex;gap:18px;font-size:14px;font-weight:bold}
+nav a:hover{color:var(--red)}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+.buttons{display:flex;gap:7px}
+.btn{border:1px solid #ddd;background:white;border-radius:50%;width:38px;height:38px;cursor:pointer}
 
-    :root {
-      --primary: #e11d48;
-      --primary-dark: #be123c;
-      --dark: #111827;
-      --dark-2: #1f2937;
-      --text: #111827;
-      --muted: #6b7280;
-      --light: #f3f4f6;
-      --white: #ffffff;
-      --border: #e5e7eb;
-      --card: #ffffff;
-      --shadow: 0 8px 30px rgba(0,0,0,.08);
-    }
+.breaking{background:var(--red);color:white;padding:10px 20px}
+.breakin{max-width:1100px;margin:auto;font-size:13px;font-weight:bold}
 
-    body.dark {
-      --text: #f9fafb;
-      --muted: #9ca3af;
-      --light: #0f172a;
-      --white: #111827;
-      --border: #374151;
-      --card: #1f2937;
-      --shadow: 0 8px 30px rgba(0,0,0,.25);
-    }
+main{max-width:1100px;margin:28px auto;padding:0 20px}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.title{border-bottom:3px solid #111827;padding-bottom:8px;margin-bottom:18px}
+.title h2{font-size:23px}
+.title h2:before{content:"";display:inline-block;width:5px;height:23px;background:var(--red);margin-right:8px;vertical-align:-4px}
 
-    body {
-      font-family:
-        "Noto Sans Khmer",
-        "Khmer OS",
-        Arial,
-        Helvetica,
-        sans-serif;
-      background: var(--light);
-      color: var(--text);
-      line-height: 1.6;
-      transition: .25s;
-    }
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-bottom:35px}
+.big,.small{position:relative;overflow:hidden;border-radius:10px;background:#111827;color:white}
+.big{height:400px}
+.big img{height:100%;opacity:.7}
+.small{height:191px}
+.small img{height:100%;opacity:.65}
+.side{display:grid;gap:18px}
+.overlay{position:absolute;inset:0;display:flex;align-items:end;padding:22px;background:linear-gradient(transparent,rgba(0,0,0,.9))}
+.tag{display:inline-block;background:var(--red);color:white;padding:4px 8px;border-radius:3px;font:bold 10px Arial;margin-bottom:7px}
+.overlay h1{font-size:31px;line-height:1.2}
+.overlay h3{font-size:18px;line-height:1.3}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+.categories{display:flex;gap:8px;overflow:auto;margin-bottom:25px}
+.categories button{white-space:nowrap;border:1px solid #ddd;background:white;padding:8px 14px;border-radius:20px;cursor:pointer}
+.categories button:hover{background:var(--red);color:white}
 
-    img {
-      display: block;
-      width: 100%;
-    }
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border-radius:9px;overflow:hidden;box-shadow:0 4px 15px #00000012}
+.card img{height:180px}
+.content{padding:15px}
+.cat{font:bold 11px Arial;color:var(--red)}
+.content h3{font-size:18px;line-height:1.35;margin:6px 0}
+.content p{font-size:13px;color:var(--muted)}
+.date{font-size:11px;color:#999;margin-top:8px}
 
-    button,
-    input {
-      font: inherit;
-    }
+.feature{margin-top:40px;background:white;border-radius:10px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.feature img{height:280px}
+.feature div{padding:28px}
+.feature h2{font-size:27px;line-height:1.3;margin:8px 0}
+.read{display:inline-block;background:var(--red);color:white;padding:9px 15px;border-radius:5px;margin-top:15px;font-weight:bold}
 
-    /* =========================
-       TOP BAR
-    ========================= */
+footer{margin-top:45px;background:var(--dark);color:white;padding:35px 20px}
+.foot{max-width:1100px;margin:auto;text-align:center}
+.footlogo{font:bold 27px Arial}
+.footlogo span{color:var(--red)}
+.foot p{color:#aaa;font-size:13px;margin-top:8px}
 
-    .top-bar {
-      background: var(--dark);
-      color: #d1d5db;
-      font-size: 13px;
-    }
+@media(max-width:800px){
+nav{display:none}
+.hero{grid-template-columns:1fr}
+.side{grid-template-columns:1fr 1fr}
+.grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:550px){
+.topin span:last-child{display:none}
+.logo{font-size:25px}
+.big{height:330px}
+.side{grid-template-columns:1fr}
+.small{height:190px}
+.grid{grid-template-columns:1fr}
+.feature{grid-template-columns:1fr}
+.feature img{height:220px}
+.overlay h1{font-size:26px}
+}
+</style>
+</head>
 
-    .top-bar-inner {
-      max-width: 1200px;
-      margin: auto;
-      padding: 8px 20px;
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-    }
+<body>
 
-    /* =========================
-       HEADER
-    ========================= */
+<div class="top">
+<div class="topin">
+<span>📰 LAST NEWS — ព័ត៌មានចុងក្រោយ</span>
+<span id="date"></span>
+</div>
+</div>
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
+<header>
+<div class="head">
+<a class="logo" href="#">LAST<span>NEWS</span><small>NEWS • MEDIA • INFORMATION</small></a>
 
-    .header-inner {
-      max-width: 1200px;
-      margin: auto;
-      min-height: 76px;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
+<nav>
+<a href="#">ទំព័រដើម</a>
+<a href="#khmer">កម្ពុជា</a>
+<a href="#world">ពិភពលោក</a>
+<a href="#business">អាជីវកម្ម</a>
+<a href="#tech">បច្ចេកវិទ្យា</a>
+<a href="#sports">កីឡា</a>
+</nav>
 
-    .logo {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 30px;
-      font-weight: 950;
-      letter-spacing: -1.5px;
-      white-space: nowrap;
-    }
+<div class="buttons">
+<button class="btn" onclick="dark()">🌙</button>
+</div>
+</div>
+</header>
 
-    .logo span {
-      color: var(--primary);
-    }
+<div class="breaking">
+<div class="breakin">🔴 BREAKING NEWS — សូមស្វាគមន៍មកកាន់ LAST NEWS • ព័ត៌មានថ្មីៗ និងទាន់ហេតុការណ៍</div>
+</div>
 
-    .logo small {
-      display: block;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 8px;
-      letter-spacing: 3px;
-      color: var(--muted);
-      font-weight: bold;
-      margin-top: -5px;
-    }
+<main>
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
+<div class="title">
+<h2>ព័ត៌មានចុងក្រោយ</h2>
+</div>
 
-    nav a {
-      font-size: 14px;
-      font-weight: 700;
-      white-space: nowrap;
-      transition: .2s;
-    }
+<section class="hero">
 
-    nav a:hover,
-    nav a.active {
-      color: var(--primary);
-    }
+<article class="big">
+<img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80">
+<div class="overlay">
+<div>
+<span class="tag">TOP STORY</span>
+<h1>LAST NEWS — ប្រភពព័ត៌មានថ្មីៗ និងទាន់ហេតុការណ៍</h1>
+<p>ព័ត៌មានកម្ពុជា ពិភពលោក អាជីវកម្ម បច្ចេកវិទ្យា កីឡា និងកម្សាន្ត។</p>
+</div>
+</div>
+</article>
 
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+<div class="side">
 
-    .icon-btn {
-      width: 40px;
-      height: 40px;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      background: transparent;
-      color: var(--text);
-      cursor: pointer;
-      font-size: 17px;
-      display: grid;
-      place-items: center;
-      transition: .2s;
-    }
+<article class="small">
+<img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=800&q=80">
+<div class="overlay">
+<div>
+<span class="tag">WORLD</span>
+<h3>ព័ត៌មានសំខាន់ៗពីពិភពលោក</h3>
+</div>
+</div>
+</article>
 
-    .icon-btn:hover {
-      background: var(--primary);
-      color: white;
-      border-color: var(--primary);
-    }
+<article class="small">
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80">
+<div class="overlay">
+<div>
+<span class="tag">BUSINESS</span>
+<h3>ព័ត៌មានអាជីវកម្ម និងសេដ្ឋកិច្ច</h3>
+</div>
+</div>
+</article>
 
-    .menu-btn {
-      display: none;
+</div>
+</section>
+
+<div class="categories">
+<button>ទាំងអស់</button>
+<button>🇰🇭 កម្ពុជា</button>
+<button>🌍 ពិភពលោក</button>
+<button>💼 អាជីវកម្ម</button>
+<button>💻 បច្ចេកវិទ្យា</button>
+<button>⚽ កីឡា</button>
+<button>🎬 កម្សាន្ត</button>
+</div>
+
+<div class="title" id="khmer">
+<h2>ព័ត៌មានថ្មីៗ</h2>
+</div>
+
+<section class="grid">
+
+<article class="card">
+<img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<span class="cat">CAMBODIA</span>
+<h3>ព័ត៌មានថ្មីៗ និងព្រឹត្តិការណ៍សំខាន់ៗនៅកម្ពុជា</h3>
+<p>តាមដានព័ត៌មានថ្មីៗ និងរឿងរ៉ាវសំខាន់ៗនៅកម្ពុជា។</p>
+<div class="date">📅 ថ្ងៃនេះ</div>
+</div>
+</article>
+
+<article class="card" id="world">
+<img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<span class="cat">WORLD</span>
+<h3>ព្រឹត្តិការណ៍សំខាន់ៗនៅលើពិភពលោក</h3>
+<p>ព័ត៌មានអន្តរជាតិ និងព្រឹត្តិការណ៍សំខាន់ៗ។</p>
+<div class="date">📅 ថ្ងៃនេះ</div>
+</div>
+</article>
+
+<article class="card" id="business">
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<span class="cat">BUSINESS</span>
+<h3>ព័ត៌មានអាជីវកម្ម និងទីផ្សារ</h3>
+<p>ព័ត៌មានសេដ្ឋកិច្ច ទីផ្សារ និងអាជីវកម្មថ្មីៗ។</p>
+<div class="date">📅 ថ្ងៃនេះ</div>
+</div>
+</article>
+
+<article class="card" id="tech">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<span class="cat">TECHNOLOGY</span>
+<h3>បច្ចេកវិទ្យាថ្មីៗកំពុងផ្លាស់ប្តូរពិភពលោក</h3>
+<p>AI, Smartphone, Internet និងបច្ចេកវិទ្យាថ្មីៗ។</p>
+<div class="date">📅 ថ្ងៃនេះ</div>
+</div>
+</article>
+
+<article class="card" id="sports">
+<img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<span class="cat">SPORTS</span>
+<h3>ព័ត៌មានកីឡា និងលទ្ធផលប្រកួតចុងក្រោយ</h3>
+<p>តាមដានព័ត៌មានកីឡា និងព្រឹត្តិការណ៍ធំៗ។</p>
+<div class="date">📅 ថ្ងៃនេះ</div>
+</div>
+</article>
+
+<article class="card">
+<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<span class="cat">ENTERTAINMENT</span>
+<h3>ព័ត៌មានកម្សាន្ត តារា និងវប្បធម៌</h3>
+<p>ព័ត៌មានកម្សាន្ត និងព្រឹត្តិការណ៍សិល្បៈ។</p>
+<div class="date">📅 ថ្ងៃនេះ</div>
+</div>
+</article>
+
+</section>
+
+<section class="feature">
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80">
+<div>
+<span class="tag">FEATURED</span>
+<h2>AI និងបច្ចេកវិទ្យា៖ អនាគតកំពុងមកដល់</h2>
+<p>បច្ចេកវិទ្យាថ្មីៗកំពុងក្លាយជាផ្នែកសំខាន់ក្នុងជីវិតប្រចាំថ្ងៃ និងអាជីវកម្ម។</p>
+<a class="read" href="#">អានបន្ថែម →</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="foot">
+<div class="footlogo">LAST<span>NEWS</span></div>
+<p>ព័ត៌មានថ្មីៗ • ទាន់ហេតុការណ៍ • ពីកម្ពុជា និងពិភពលោក</p>
+<p>© 2026 LAST NEWS — All Rights Reserved.</p>
+</div>
+</footer>
+
+<script>
+document.getElementById("date").textContent=new Date().toLocaleDateString("km-KH",{year:"numeric",month:"long",day:"numeric"});
+
+function dark(){
+document.body.classList.toggle("dark");
+}
+
+</script>
+
+</body>
+</html>
